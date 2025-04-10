@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Not Obsidian - Our Designs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.85);
+      min-height: 100vh;
+      padding-bottom: 3rem;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+
+    .highlight-banner {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 90%;
+      padding: 1rem 0;
+    }
+
+    .highlight-banner img {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+
+    .vip-entry {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      text-align: center;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      position: absolute;
+      top: 850px;
+      left: 450px;
+    }
+
+    .vip-entry h2 {
+      margin-bottom: 1rem;
+    }
+
+    .vip-entry input {
+      padding: 0.7rem;
+      width: 220px;
+      margin: 0.5rem;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .vip-entry button {
+      padding: 0.7rem 1.2rem;
+      background: #00ffe7;
+      color: #111;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .vip-entry button:hover {
+      background: #00c4a7;
+    }
+
+    .vip-entry .error {
+      color: #ff4d4d;
+      margin-top: 1rem;
+    }
+
+    .designs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .design {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .design img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .design h3 {
+      margin-top: 1rem;
+    }
+
+    .design p {
+      margin: 0.5rem 0 1rem;
+    }
+
+    .design a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background: #00ffe7;
+      color: #111;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header> GRAYSCALE</header>
+
+    <div class="highlight-banner">
+      <img src="https://i.ibb.co/Lz4vXZ4L/background.jpg" alt="Banner" />
+    </div>
+
+    <!-- VIP Entry Section -->
+    <div class="vip-entry">
+      <h2>GS CODE FOR NOT OBSEDIAN</h2>
+      <input type="text" id="vipCodeInput" placeholder="Enter NNN VIP Code" />
+      <button onclick="validateVipCode()">Enter</button>
+      <div class="error" id="vipError"></div>
+    </div>
+
+    <section class="designs" id="designSection" style="display: none;">
+      <div class="design">
+        <img src="https://via.placeholder.com/300x300?text=Design+1" alt="Design 1" />
+        <h3>Minimal Vibes</h3>
+        <p>Price: ₹1800</p>
+        <a href="https://razorpay.me/@grayscale?amount=W7qx%2B%2FRCGtKrOvbdFyMe5Q%3D%3D" target="_blank">Buy Now</a>
+      </div>
+      <div class="design">
+        <img src="https://via.placeholder.com/300x300?text=Design+2" alt="Design 2" />
+        <h3>Bold Edge</h3>
+        <p>Price: ₹1800</p>
+        <a href="https://razorpay.me/@grayscale?amount=W7qx%2B%2FRCGtKrOvbdFyMe5Q%3D%3D" target="_blank">Buy Now</a>
+      </div>
+      <div class="design">
+        <img src="https://via.placeholder.com/300x300?text=Design+3" alt="Design 3" />
+        <h3>Street Fusion</h3>
+        <p>Price: ₹1800</p>
+        <a href="https://razorpay.me/@grayscale?amount=W7qx%2B%2FRCGtKrOvbdFyMe5Q%3D%3D" target="_blank">Buy Now</a>
+      </div>
+      <div class="design" style="grid-column: span 3;">
+        <h3>Buy Any 2 Designs - ₹3300</h3>
+        <a href="https://razorpay.me/@grayscale?amount=SJwG%2FvUvYptH84e03i2QGg%3D%3D" target="_blank">Buy 2 Designs</a>
+      </div>
+      <div class="design" style="grid-column: span 3;">
+        <h3>Buy All 3 Designs - ₹5000</h3>
+        <a href="https://razorpay.me/@grayscale?amount=Hrc9gAOPjYioEfEfn0m7SA%3D%3D" target="_blank">Buy All</a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const validVipCodes = [
+      "NNN2025VIP01", "NNN2025VIP02", "NNN2025VIP03", "NNN2025VIP04", "NNN2025VIP05",
+      "NNN2025VIP06", "NNN2025VIP07", "NNN2025VIP08", "NNN2025VIP09", "NNN2025VIP10"
+    ];
+
+    function validateVipCode() {
+      const code = document.getElementById("vipCodeInput").value.trim();
+      const errorDiv = document.getElementById("vipError");
+
+      if (validVipCodes.includes(code)) {
+        document.getElementById("designSection").style.display = "grid";
+        document.querySelector(".vip-entry").style.display = "none";
+      } else {
+        errorDiv.textContent = "Invalid VIP Code. Access Denied.";
+      }
+    }
+  </script>
+</body>
+</html>
